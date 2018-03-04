@@ -123,7 +123,13 @@
         app.initialize();
         
         function myFunction() {
-		    var person = prompt("Introducir IP", "Por favor");
+	        var ipstore = localStorage.getItem("ipAdresss");
+	        if(ipstore){
+		        var person = prompt("Introducir IP", ipstore);
+	        } else {
+		        var person = prompt("Introducir IP", "0.0.0.0");
+	        }
+		    
 		    if (person != null) {
 			    
 			   
@@ -132,6 +138,7 @@
 		   
 		        
 		         var element = document.getElementById("mainFrame");
+		         localStorage.setItem("ipAdresss", person);
 				element.classList.add("loaded");
 		    }
 		}
