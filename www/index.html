@@ -135,7 +135,16 @@
 			   
 			    document.getElementById("mainFrame").src = "http://" + person + ":9000/mlogin";
 			    
-		   
+		   var req = indexedDB.deleteDatabase('_pouch_lanapp');
+				req.onsuccess = function () {
+				    console.log("Deleted database successfully");
+				};
+				req.onerror = function () {
+				    console.log("Couldn't delete database");
+				};
+				req.onblocked = function () {
+				    console.log("Couldn't delete database due to the operation being blocked");
+				};
 		        
 		         var element = document.getElementById("mainFrame");
 		         localStorage.setItem("ipAdresss", person);
