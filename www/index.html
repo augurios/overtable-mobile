@@ -131,7 +131,9 @@
 	        }
 		    
 		    if (person != null) {
-			    
+			    indexedDB.webkitGetDatabaseNames().onsuccess = function(event) {
+					  Array.prototype.forEach.call(event.target.result, indexedDB.deleteDatabase.bind(indexedDB));
+					}
 			   
 			    document.getElementById("mainFrame").src = "http://" + person + ":9000/mlogin";
 			    
