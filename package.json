@@ -1,0 +1,21 @@
+{
+  "name": "overtable-mobile-companion",
+  "version": "1.0.1",
+  "description": ">Overtable Mobile App",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/augurios/overtable-mobile.git"
+  },
+  "author": "Disruptive Partners",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/augurios/overtable-mobile/issues"
+  },
+  "homepage": "overtable.disruptive.pro"
+}
