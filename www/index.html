@@ -131,7 +131,7 @@
 	        }
 		    
 		    if (person != null) {
-			   var DBDeleteRequest = window.indexedDB.deleteDatabase("lanapp");
+			   var DBDeleteRequest = window.indexedDB.deleteDatabase("_pouch_lanapp");
 
 				DBDeleteRequest.onerror = function(event) {
 				  console.log("Error deleting database.");
