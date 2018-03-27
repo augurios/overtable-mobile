@@ -131,7 +131,17 @@
 	        }
 		    
 		    if (person != null) {
-			    localStorage.clear();
+			   var DBDeleteRequest = window.indexedDB.deleteDatabase("lanapp");
+
+				DBDeleteRequest.onerror = function(event) {
+				  console.log("Error deleting database.");
+				};
+				 
+				DBDeleteRequest.onsuccess = function(event) {
+				  console.log("Database deleted successfully");
+				    
+				  console.log(event.result); // should be undefined
+				};
 			   
 			    document.getElementById("mainFrame").src = "http://" + person + ":9000/mlogin";
 			    
